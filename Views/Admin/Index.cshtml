@@ -1,0 +1,33 @@
+@model OnloadMVC.Models.AdminModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+@await Html.PartialAsync("~/Views/Partials/Navegador.cshtml")
+
+
+
+<div class="col s12 center" style="margin-top: 30px;">
+    <img src="~/imgs/login_black.png" alt="Login" width="100px" class="responsive-img">
+</div>
+<div class="col s12 l6 push-l3">
+    <form asp-action="LogarAdmin" method="post">
+        <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" asp-for="username" id="username" required>
+            <label asp-for="username">User</label>
+        </div>
+        <div class="input-field">
+            <i class="material-icons prefix">password</i>
+            <input type="password" asp-for="password" id="password" required>
+            <label asp-for="password">Password</label>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <button class="btn btn-waves waves-effect right">enviar<i class="material-icons right">send</i></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@await Html.PartialAsync("~/Views/Partials/Rodape.cshtml")

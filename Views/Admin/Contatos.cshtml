@@ -1,0 +1,40 @@
+@model IEnumerable<OnloadMVC.Models.ContatoModel>
+
+@{
+    ViewData["Title"] = "Contatos";
+}
+
+@await Html.PartialAsync("~/Views/Partials/Navegador.cshtml")
+
+<div class="col s12 l10 push-l1 center">
+    <p class="center"><b>Tabela de contatos</b></p>
+    <table class="responsive-table centered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => item.id)</td>
+                    <td>@Html.DisplayFor(model => item.data)</td>
+                    <td>@Html.DisplayFor(model => item.nome)</td>
+                    <td>@Html.DisplayFor(model => item.telefone)</td>
+                    <td>@Html.DisplayFor(model => item.email)</td>
+                    <td><a class="btn-floating btn-small red" onclick="deletar(event)" asp-controller="Admin"
+                        asp-action="Deletar" asp-route-id="@item.id"><i class="material-icons">delete</i></a></td>
+                    <td><a class="btn-floating btn-small blue" asp-controller="Admin" asp-action="Update"
+                        asp-route-id="@item.id" data-id="@item.id"><i class="material-icons">edit</i></a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script src="~/js/admin.js"></script>

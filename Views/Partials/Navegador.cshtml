@@ -1,0 +1,22 @@
+<header>
+        <nav class="grey darken-4">
+        <div class="nav-wrapper">
+            <a class="brand-logo center" asp-area="" asp-controller="Home" asp-action="Index">Onload-MVC</a>
+
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="material-icons left">home</i>Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contato"><i class="material-icons left">email</i>Contato</a></li>
+                <li><a asp-area="" asp-controller="Admin" asp-action="Index"><i class="material-icons left">lock</i>Admin</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="material-icons left">home</i>Home</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Contato"><i class="material-icons left">email</i>Contato</a></li>
+        <li><a asp-area="" asp-controller="Admin" asp-action="Index"><i class="material-icons left">lock</i>Admin</a></li>
+    </ul>
+
+</header>

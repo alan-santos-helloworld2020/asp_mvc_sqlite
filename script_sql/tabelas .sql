@@ -1,0 +1,15 @@
+CREATE TABLE "user" (
+	"id"	INTEGER NOT NULL,
+	"username"	TEXT NOT NULL UNIQUE,
+	"password"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+CREATE TABLE "contatos" (
+	"id"	INTEGER NOT NULL,
+	"data"	TEXT NOT NULL,
+	"nome"	TEXT NOT NULL,
+	"telefone"	TEXT NOT NULL,
+	"email"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
